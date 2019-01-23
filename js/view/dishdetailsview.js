@@ -17,19 +17,19 @@ var DetailView = function (container, model) {
 
     item.html(source);
 
-	var ing = dsh.ingredients;
+	var list = dsh.ingredients;
 
-	var div = "<div class='row'><div class='col-md-2 col-xs-4'>"
+	var div = "<div class='row'>";
 
-	for (let x of ing) {
-		div += x.quantity + " " + x.unit + "</div>"
-	+ "<div class='col-md-2 col-xs-4'>" + x.name + "</div><div class='col-md-2 col-xs-4'>SEK</div>"
+	for (let ing of list) {
+		div += "<div class='col-md-2 col-xs-4'>" + ing.quantity + " " + ing.unit + "</div>"
+	+ "<div class='col-md-2 col-xs-4'>" + ing.name + "</div><div class='col-md-2 col-xs-4'>SEK</div>"
 	+ "<div class='col-md-2 col-xs-4'>"
-	+ x.price + ".00</div></div>";
+	+ ing.price + ".00</div></div>";
 
 	ingredientlist.html(div);
 
-	}
+	};
 
 }
  
