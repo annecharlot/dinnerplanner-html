@@ -16,24 +16,19 @@ var DetailView = function (container, model) {
     + "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>";
 
     item.html(source);
-    
+
 	var ing = dsh.ingredients;
 
-	for (x of ing) {
+	for (let x of ing) {
 		var div = "<div class='row'><div class='col-md-2 col-xs-4'>"
-		+ ing.quantity + ing.unit + "</div>"
-	+ "<div class='col-md-2 col-xs-4'>" + ing.name + "</div><div class='col-md-2 col-xs-4'>SEK</div>"
+		+ x.quantity + " " + x.unit + "</div>"
+	+ "<div class='col-md-2 col-xs-4'>" + x.name + "</div><div class='col-md-2 col-xs-4'>SEK</div>"
 	+ "<div class='col-md-2 col-xs-4'>"
-	+ ing.price + "</div></div>";
-	ingredientlist.html(div);
+	+ x.price + ".00</div></div>";
 
+	ingredientlist.html(div);
 
 	}
 
-	
-	
-	
-
-	
 }
  
