@@ -9,6 +9,10 @@ $(function() {
 
 	var itemView = new ItemView($("#itemView"), model);
 
+	var ItemimgView = new ItemImgView($("#ItemimgView"), model);
+
+	var detailView = new DetailView($("#detailView"), model);
+
 	/**
 	 * IMPORTANT: app.js is the only place where you are allowed to
 	 * use the $('someSelector') to search for elements in the whole HTML.
