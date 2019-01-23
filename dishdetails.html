@@ -18,35 +18,8 @@
 <div class="container-fluid" id="detailView">
   <div class="row">
 
-    <div class="col-xs-2 col-md-2" style="border: 1px solid black; height: 500px;">
-        <!-- sidebar view -->
-        <h3>My Dinner</h3>
-      <div class="row">
-        <div class="col-xs-6 col-md-6">
-
-          People</div>
-          <div class="col-xs-6 col-md-6">
-            <select>
-              <option value="number">1</option>
-              <option value="number">2</option>
-              <option value="number">3</option>
-              <option value="number">...</option>
-            </select>
-          </div>
-        </div>
-
-      <hr class="divider" style="border-bottom: 1px solid black;"/>
-      <div class="row">
-        <div class="col-xs-6 col-md-6">Dish Name</div>
-        <div class="col-xs-4 col-md-6">Cost</div>
-      </div>
-      <hr class="divider" style="border-bottom: 1px solid black;"/>
-      <div class="row">
-        <div class="col-xs-6 col-md-6"></div>
-        <div class="col-xs-4 col-md-6">SEK 00.00</div>
-      </div>
-      <hr class="divider"/>
-      <button>Confirm Dinner</button>
+    <div id="sidesbarview" class="col-xs-2 col-md-2" style="border: 1px solid black; height: 500px;">
+        <span id="sidebar"></span>
       </div>
 
     <div class="col-xs-5 col-md-5">
@@ -54,7 +27,7 @@
     </div>
 
     <div id="exampleView" class="col-xs-5 col-md-5" style="background-color: rgba(244, 179, 100, 1); border: 1px solid black; height:300px;">
-      <h3>Ingredients for <span id="numberOfGuests"></span> People</h3>
+      <h3>Ingredients for <span id="number"></span> People</h3>
       <!-- alla ingredients till dish och price -->
       <hr class="divider" style="border: 1px solid black;"/>
       <span id="ingredients"></span>
@@ -79,6 +52,8 @@
 <script src="js/view/dishsearchview.js"></script>
 <script src="js/view/dishdetailsview.js"></script>
 <script src="js/view/itemimgView.js"></script>
+<script src="js/view/sidesbarview.js"></script>
+
 
   </body>
 </html>

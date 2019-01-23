@@ -2,6 +2,7 @@
 var ExampleView = function (container, model) {
 
 var numberOfGuests = container.find("#numberOfGuests");
+var onlynumber = container.find("#number");
 
 model.setNumberOfGuests(3);
 var number = model.getNumberOfGuests();
@@ -13,5 +14,5 @@ var text = "<div class='row'><div class='col-xs-12 col-md-8'>"
 + "Go back and edit dinner</button></div></div>";
 
 numberOfGuests.html(text);
-
+onlynumber.html(number); 
 }

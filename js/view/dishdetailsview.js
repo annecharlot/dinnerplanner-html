@@ -19,9 +19,10 @@ var DetailView = function (container, model) {
 
 	var ing = dsh.ingredients;
 
+	var div = "<div class='row'><div class='col-md-2 col-xs-4'>"
+
 	for (let x of ing) {
-		var div = "<div class='row'><div class='col-md-2 col-xs-4'>"
-		+ x.quantity + " " + x.unit + "</div>"
+		div += x.quantity + " " + x.unit + "</div>"
 	+ "<div class='col-md-2 col-xs-4'>" + x.name + "</div><div class='col-md-2 col-xs-4'>SEK</div>"
 	+ "<div class='col-md-2 col-xs-4'>"
 	+ x.price + ".00</div></div>";
