@@ -7,13 +7,15 @@ var SidebarView = function (container, model) {
 	var total_price = model.getTotalMenuPrice(); 
 	if menu != NONE: lägg till, annars kör fullbar*/
 
+	var number= model.getNumberOfGuests();
+
 	var fullbar = "<h3>My Dinner</h3>"
 	+ "<div class='row'><div class='col-xs-6 col-md-6'>"
 	+ "People</div><div class='col-xs-6 col-md-6'>"
 	+ "<select>"
-	+ "<option value='number'>1</option>"
-	+ "<option value='number'>2</option>"
-	+ "<option value='number'>3</option>"
+	+ "<option value='number'>" + number + "</option>"
+	+ "<option value='number'>" + (number+1) + "</option>"
+	+ "<option value='number'>" + (number+2) + "</option>"
 	+ "<option value='number'>...</option>"
 	+ "</select></div></div>"
 	+ "<hr class='divider' style='border-bottom: 1px solid black;'/>"

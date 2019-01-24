@@ -41,9 +41,7 @@ class DinnerModel {
 	//Returns all the dishes on the menu.
 	getFullMenu() {
 		//TODO Lab 1
-		for(let dsh of this.menu){
-		    return dsh;
-	    }
+		return this.menu;
 	}
 
 	//Returns all ingredients for all the dishes on the menu.
