@@ -3,6 +3,7 @@ var DetailView = function (container, model) {
 
 	var ingredientlist = container.find("#ingredients");
 	var item = container.find("#item");
+	var totalprice = container.find("#totalprice");
 	
 	var dsh = model.getDish(1);
 
@@ -20,16 +21,24 @@ var DetailView = function (container, model) {
 	var list = dsh.ingredients;
 
 	var div = "";
+	var price = 0;
+
+	var number = model.getNumberOfGuests();
 
 	for (let ing of list) {
-		div += "<div class='row'><div class='col-md-3 col-xs-4'>" + ing.quantity + " " + ing.unit + "</div>"
+		div += "<div class='row'><div class='col-md-3 col-xs-4'>" + ing.quantity*number + " " + ing.unit + "</div>"
 	+ "<div class='col-md-3 col-xs-4'>" + ing.name + "</div><div class='col-md-2 col-xs-4'>SEK</div>"
 	+ "<div class='col-md-2 col-xs-4'>"
-	+ ing.price + ".00</div></div>";
+	+ ing.price*number + ".00</div></div>";
 
 	ingredientlist.html(div);
 
+	price+= ing.price* number;
+
 	};
+
+	totalprice.html(price);
+		
 
 }
  
