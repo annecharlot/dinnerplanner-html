@@ -7,8 +7,10 @@ class DinnerModel {
 	//TODO Lab 1 implement the data structure that will hold number of guest
 	// and selected dishes for the dinner menu
 
-	const menuconst = [{}];
+	const menuconst = [];
 	this.menu = menuconst;
+
+	this.number = 0;
 
     }
 
@@ -71,11 +73,9 @@ class DinnerModel {
 		for(let dsh of this.menu){
 		if(dsh.id == id) {
 		    this.menu.splice(this.menu.indexOf(id), 1);
-		    this.menu.push(this.getDish(id));
 		}
-		this.menu.push(this.getDish(id));
 	    }
-
+	    this.menu.push(this.getDish(id));
 	}
 
 	//Removes dish from menu
