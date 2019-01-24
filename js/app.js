@@ -15,6 +15,8 @@ $(function() {
 
 	var sidebar = new SidebarView($("#sidesbarview"), model);
 
+	var welcomeview = new WelcomeView($("#WelcomeView"), model);
+
 	/**
 	 * IMPORTANT: app.js is the only place where you are allowed to
 	 * use the $('someSelector') to search for elements in the whole HTML.
