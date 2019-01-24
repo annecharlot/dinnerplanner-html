@@ -34,8 +34,17 @@ class DinnerModel {
 		    return dsh;
 		}
 	    }
-	    return undefined;
 
+	}
+
+	getSelectedDishTotal(type){
+		const typearray = []
+		for(let dsh of this.dishes){
+			if (dsh.type == type) {
+				typearray.push(dsh);
+			}
+		}
+		return typearray;
 	}
 
 	//Returns all the dishes on the menu.
