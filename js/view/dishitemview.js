@@ -13,7 +13,6 @@ var ItemView = function (container, model) {
 
 	for (let dsh of menu) { 
 		
-
 		var img = "///Users/annecharlot/Documents/KTH/ÅK3/interaktionsprogrammering/GitHub/dinnerplanner-html/images/" + dsh.image;
 
 		var source= "<img src='" + img + "'style='outline: 1px solid black;'/>" ; 
@@ -25,9 +24,8 @@ var ItemView = function (container, model) {
 		+ "<div class='col-xs-5 col-md-5'><h4>Preparation</h4>"
 		+ "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 		+ "</div><br/></div>";
-
-		fullitem.html(full);
+		
 	};
-
+	fullitem.html(full);
 }
  
