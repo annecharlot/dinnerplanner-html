@@ -4,7 +4,8 @@ var SidebarView = function (container, model) {
 	var sidebar = container.find("#sidebar");
 
 	/** var menu = model.getFullMenu();
-	var total_price = model.getTotalMenuPrice(); */
+	var total_price = model.getTotalMenuPrice(); 
+	if menu != NONE: lägg till, annars kör fullbar*/
 
 	var fullbar = "<h3>My Dinner</h3>"
 	+ "<div class='row'><div class='col-xs-6 col-md-6'>"
