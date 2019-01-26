@@ -3,7 +3,7 @@ var WelcomeView = function (container, model) {
 	
 	var welcome = container.find("#welcome");
 
-	var view = "<div class='row'><div class='col-md-4 col-md-offset-4' style='padding:40px 0 40px 0;'>"
+	var view = "<div class='row'><div class='col-md-4 col-md-offset-4 col-xs-12' style='padding:40px 0 40px 0;'>"
 	+ "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt"
 	+ "ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
 	+ "nisi ut aliquip ex ea commodo consequat.</p>"

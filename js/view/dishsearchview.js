@@ -12,7 +12,7 @@ var DishSearchView = function (container, model) {
 	for(let dsh of type){
 		
 			var img = "///Users/annecharlot/Documents/KTH/ÅK3/interaktionsprogrammering/GitHub/dinnerplanner-html/images/" + dsh.image;
-			full += "<div class='col-xs-2 col-md-2'><img src='" + img + "'style='outline: 1px solid black;'/>" + "<h4>" + dsh.name + "</h4></div>"; 
+			full += "<div class='col-xs-12 col-md-2'><img src='" + img + "'style='outline: 1px solid black;'/>" + "<h4>" + dsh.name + "</h4></div>"; 
 				      
 			dishsearch.html(full);
 		}

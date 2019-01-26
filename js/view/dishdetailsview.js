@@ -26,9 +26,9 @@ var DetailView = function (container, model) {
 	var number = model.getNumberOfGuests();
 
 	for (let ing of list) {
-		div += "<div class='row'><div class='col-md-3 col-xs-4'>" + ing.quantity*number + " " + ing.unit + "</div>"
-	+ "<div class='col-md-3 col-xs-4'>" + ing.name + "</div><div class='col-md-2 col-xs-4'>SEK</div>"
-	+ "<div class='col-md-2 col-xs-4'>"
+		div += "<div class='row'><div class='col-md-4 col-xs-4'>" + ing.quantity*number + " " + ing.unit + "</div>"
+	+ "<div class='col-md-4 col-xs-4'>" + ing.name + "</div>"
+	+ "<div class='col-md-4 col-xs-4'>SEK "
 	+ ing.price*number + ".00</div></div>";
 
 	ingredientlist.html(div);
