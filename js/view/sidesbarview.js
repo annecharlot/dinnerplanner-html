@@ -26,7 +26,6 @@ var SidebarView = function (container, model) {
 	+ "<hr class='divider' style='border-bottom: 1px solid black;'/>"
 	
 	if (menu.size != 0) {
-		var totalprice = 0;
 
 		for(let dsh of menu){
 
@@ -42,12 +41,11 @@ var SidebarView = function (container, model) {
 			+ "<div class='col-xs-4 col-md-6'>" + price + "</div>"
 			+ "</div>";
 
-			totalprice += price;
 		};
 
 		fullbar += "<div class='row'>"
         + "<div class='col-xs-6 col-md-6'></div>"
-        + "<div class='col-xs-4 col-md-6'>SEK " + totalprice + "</div></div>";
+        + "<div class='col-xs-4 col-md-6'>SEK " + total_price + "</div></div>";
 
 		fullbar += "<hr class='divider'/><button class='btn' style='background-color: rgba(244, 179, 80, 1);"
 		+ "border: black; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);''>Confirm Dinner</button>";

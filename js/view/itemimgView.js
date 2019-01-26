@@ -10,7 +10,7 @@ var ItemImgView = function (container, model) {
 
 	var source="";
 	var fullprice ="";
-	var totalprice = 0;
+	var totalprice = model.getTotalMenuPrice();
 
 	for (let dsh of menu) { 
   
@@ -21,11 +21,8 @@ var ItemImgView = function (container, model) {
 			price+= ing.price* number;
 		};
 
-
 		var img = "///Users/annecharlot/Documents/KTH/ÅK3/interaktionsprogrammering/GitHub/dinnerplanner-html/images/" + dsh.image;
 		source += "<div class='col-xs-12 col-md-3'><img src='" + img + "'style='outline: 1px solid black;'/>" + "<h4>" + dsh.name + "</h4>" + price + " SEK</div>"; 
-
-		totalprice += price;
 		
 	};
 
