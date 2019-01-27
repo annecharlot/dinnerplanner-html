@@ -12,7 +12,7 @@ var SidebarView = function (container, model) {
 	var total_price = model.getTotalMenuPrice(); 
 	var number= model.getNumberOfGuests();
 	
-	var fullbar = "<div class='collapse' id='toggle'><h3>My Dinner</h3>"
+	var fullbar = "<div class='collapse in' id='toggle'><h3>My Dinner</h3>"
 	+ "<div class='row'><div class='col-xs-6 col-md-6'>"
 	+ "People</div><div class='col-xs-6 col-md-6'>"
 	+ "<select>"
