@@ -3,15 +3,16 @@ var SidebarView = function (container, model) {
 	
 	var sidebar = container.find("#sidebar");
 
-	/** var menu = model.getFullMenu();
-	var total_price = model.getTotalMenuPrice(); 
-	if (menu.size == 0) {lägg till, annars kör fullbar}*/
+	/** 
+	this.plusButton = container.find("#plusGuest");
+	this.minusButton = container.find("#minusGuest");
+		*/
 
 	var menu = model.getFullMenu();
 	var total_price = model.getTotalMenuPrice(); 
 	var number= model.getNumberOfGuests();
 	
-	var fullbar = "<h3>My Dinner</h3>"
+	var fullbar = "<div class='collapse' id='toggle'><h3>My Dinner</h3>"
 	+ "<div class='row'><div class='col-xs-6 col-md-6'>"
 	+ "People</div><div class='col-xs-6 col-md-6'>"
 	+ "<select>"
@@ -48,7 +49,7 @@ var SidebarView = function (container, model) {
         + "<div class='col-xs-4 col-md-6'>SEK " + total_price + "</div></div>";
 
 		fullbar += "<hr class='divider'/><button class='btn' style='background-color: rgba(244, 179, 80, 1);"
-		+ "border: black; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);''>Confirm Dinner</button>";
+		+ "border: black; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);''>Confirm Dinner</button></div>";
 		sidebar.html(fullbar);
 	}
 	
