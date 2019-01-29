@@ -19,7 +19,7 @@ var DishSearchView = function (container, model) {
 		}
 
 	var field = "<div class='row'><div class='col-xs-12 col-md-2'><input type='text' value='Enter Key Words'>"
-	+ "</div><div class='col-xs-12 col-md-2'><select><option value='menu'>All</option>"
+	+ "</div><div class='col-xs-12 col-md-2'><select><option value='menu'>Starter</option>"
 	+ "<option value='menu'>Main Course</option>"
 	+ "<option value='menu'>Side Dish</option><option value='menu'>Dessert</option>"
 	+ "<option value='menu'>Appetizer</option>"

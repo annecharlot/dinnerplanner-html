@@ -12,11 +12,25 @@ class DinnerModel {
 
 	this.number = 0;
 
+	this._observers = [];
+
     }
+
+    addObserver(observer){
+	   this._observers.push(observer);
+    }
+
+    notifyObservers(changeDetails) {
+           for(var i=0; i<this._observers.length; i++) {
+                 this._observers[i].update(this, changeDetails);
+           }	
+     }
+
 
 	setNumberOfGuests(num) {
 		//TODO Lab 1
 		this.number = num;
+		this.notifyObservers("number");
 		
 	}
 	
@@ -83,6 +97,8 @@ class DinnerModel {
 		}
 	    }
 	    this.menu.push(this.getDish(id));
+	    this.notifyObservers("menu");
+
 	}
 
 	//Removes dish from menu
@@ -90,6 +106,7 @@ class DinnerModel {
 		//TODO Lab 1
 		var menu = this.menu;
 		menu.splice(menu.indexOf(id), 1);
+		this.notifyObservers("menu");
 	}
 
     
@@ -136,7 +153,7 @@ class DinnerModel {
 	// you just say "5 eggs" and not "5 pieces of eggs" or anything else.
         const dishesConst = [{
 		'id':1,
-		'name':'French toast',
+		'name':'French Toast',
 		'type':'starter',
 		'image':'toast.jpg',
 		'description':"In a large mixing bowl, beat the eggs. Add the milk, brown sugar and nutmeg; stir well to combine. Soak bread slices in the egg mixture until saturated. Heat a lightly oiled griddle or frying pan over medium high heat. Brown slices on both sides, sprinkle with cinnamon and serve hot.",

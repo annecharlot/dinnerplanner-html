@@ -10,7 +10,7 @@ var SidebarView = function (container, model) {
 
 	model.removeDishFromMenu(1);
 	model.removeDishFromMenu(202);*/
-	
+
 	var menu = model.getFullMenu();
 	var total_price = model.getTotalMenuPrice(); 
 	var number= model.getNumberOfGuests();
@@ -18,12 +18,7 @@ var SidebarView = function (container, model) {
 	var fullbar = "<div class='collapse in' id='toggle'><h3>My Dinner</h3>"
 	+ "<div class='row'><div class='col-xs-6 col-md-6'>"
 	+ "People</div><div class='col-xs-6 col-md-6'>"
-	+ "<select>"
-	+ "<option value='number'>" + number + "</option>"
-	+ "<option value='number'>" + (number+1) + "</option>"
-	+ "<option value='number'>" + (number+2) + "</option>"
-	+ "<option value='number'>...</option>"
-	+ "</select></div></div>"
+	+ "<input type='number' value='" + number + "' style='width: 40px;'></input></div></div>"
 	+ "<hr class='divider' style='border-bottom: 1px solid black;'/>"
 	+ "<div class='row'><div class='col-xs-6 col-md-6'>Dish Name</div>"
 	+ "<div class='col-xs-4 col-md-6'>Cost</div></div>"
@@ -51,7 +46,7 @@ var SidebarView = function (container, model) {
         + "<div class='col-xs-6 col-md-6'></div>"
         + "<div class='col-xs-4 col-md-6'>SEK " + total_price + "</div></div>";
 
-		fullbar += "<hr class='divider'/><button class='btn' style='background-color: rgba(244, 179, 80, 1);"
+		fullbar += "<hr class='divider'/><button id='confirm' class='btn' style='background-color: rgba(244, 179, 80, 1);"
 		+ "border: black; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);''>Confirm Dinner</button></div>";
 		sidebar.html(fullbar);
 	}

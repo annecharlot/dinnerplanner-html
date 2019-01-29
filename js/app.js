@@ -1,5 +1,7 @@
 $(function() {
 
+	//* Views */
+
 	var model = new DinnerModel();
 	
 	var exampleView = new Mydinner($("#Mydinner"), model);
@@ -16,49 +18,68 @@ $(function() {
 
 	var dishsearchview = new DishSearchView($("#DishSearchView"), model);
 
+	//* Controllers */
 
-/** $("#Mydinner").hide();
-$("#itemView").hide();
-$("#ItemimgView").hide();
-$("#detailView").hide();
-$("#sidesbarview").hide();
-$("#WelcomeView").hide();
-$("#DishSearchView").hide();
-$("#selectdish").hide();
-$("#selectdishagain").hide();
+	var welcomecontroller = new WelcomeViewController(welcomeview, model, this);
+
+	var backandeditcontroller = new BackandEditController(ItemimgView, itemView, model, this);
+
+	var backtosearchcontroller = new BacktoSearchController(detailView, model, this);
+
+	var confirmdinnercontroller = new ConfirmDinnerController(sidesbarview, model, this);
 
 
-function showwelcomeview() {
-	$("#WelcomeView").show();
-}
+	//* general state controller */
 
-function selectdish(){
-	$("#selectdish").show();
-	$("#sidesbarview").show();
-	$("#DishSearchView").show();
-}
+	function hideallviews(){
 
-function selectdishagain(){
-	$("#selectdishagain").show();
-	$("#sidesbarview").show();
-	$("#DishSearchView").show();
-}
+	$("#Mydinner").hide();
+	$("#itemView").hide();
+	$("#ItemimgView").hide();
+	$("#detailView").hide();
+	$("#sidesbarview").hide();
+	$("#WelcomeView").hide();
+	$("#DishSearchView").hide();
+	$("#selectdish").hide();
+	$("#selectdishagain").hide();
 
-function dishdetails(){
-	$("#detailView").show();
-	$("#sidesbarview").show();
-}
+	}
 
-function dinneroverview(){
-	$("#Mydinner").show();
-	$("#ItemimgView").show();
-}
+	function showwelcomeview() {
+		hideallviews();
+		$("#WelcomeView").show();
+	}
 
-function dinnerprintout(){
-	$("#Mydinner").show();
-	$("#itemView").show();
-}
+	function selectdish(){
+		hideallviews();
+		$("#selectdish").show();
+		$("#sidesbarview").show();
+		$("#DishSearchView").show();
+	}
 
-selectdishagain();*/
+	function selectdishagain(){
+		hideallviews();
+		$("#selectdishagain").show();
+		$("#sidesbarview").show();
+		$("#DishSearchView").show();
+	}
+
+	function dishdetails(){
+		hideallviews();
+		$("#detailView").show();
+		$("#sidesbarview").show();
+	}
+
+	function dinneroverview(){
+		hideallviews();
+		$("#Mydinner").show();
+		$("#ItemimgView").show();
+	}
+
+	function dinnerprintout(){
+		hideallviews();
+		$("#Mydinner").show();
+		$("#itemView").show();
+	}
 
 });
