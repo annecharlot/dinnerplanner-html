@@ -16,4 +16,48 @@ $(function() {
 
 	var dishsearchview = new DishSearchView($("#DishSearchView"), model);
 
+
+
+$("#exampleView").hide();
+$("#itemView").hide();
+$("#ItemimgView").hide();
+$("#detailView").hide();
+$("#sidesbarview").hide();
+$("#WelcomeView").hide();
+$("#DishSearchView").hide();
+$("#selectdish").hide();
+$("#selectdishagain").hide();
+
+
+function showWelcomeview() {
+	$("#WelcomeView").show();
+}
+
+function selectdish(){
+	$("#selectdish").show();
+	$("#sidesbarview").show();
+	$("#DishSearchView").show();
+}
+
+function selectdishagain(){
+	$("#selectdishagain").show();
+	$("#sidesbarview").show();
+	$("#DishSearchView").show();
+}
+
+function dishdetails(){
+	$("#detailView").show();
+	$("#sidesbarview").show();
+}
+
+function dinneroverview(){
+	$("#exampleView").show();
+	$("#ItemimgView").show();
+}
+
+function dinnerprintout(){
+	$("#exampleView").show();
+	$("#itemView").show();
+}
+
 });

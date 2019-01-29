@@ -4,6 +4,7 @@ var DetailView = function (container, model) {
 	var ingredientlist = container.find("#ingredients");
 	var item = container.find("#item");
 	var totalprice = container.find("#totalprice");
+	var guests = container.find("#number");
 	
 	var dsh = model.getDish(1);
 
@@ -38,7 +39,7 @@ var DetailView = function (container, model) {
 	};
 
 	totalprice.html(price);
-		
+	guests.html(number);
 
 }
  
