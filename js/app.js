@@ -28,7 +28,7 @@ $("#selectdish").hide();
 $("#selectdishagain").hide();
 
 
-function showWelcomeview() {
+function showwelcomeview() {
 	$("#WelcomeView").show();
 }
 
@@ -37,6 +37,8 @@ function selectdish(){
 	$("#sidesbarview").show();
 	$("#DishSearchView").show();
 }
+
+selectdishagain();
 
 function selectdishagain(){
 	$("#selectdishagain").show();

@@ -6,8 +6,11 @@ var SidebarView = function (container, model) {
 	/** 
 	this.plusButton = container.find("#plusGuest");
 	this.minusButton = container.find("#minusGuest");
-		*/
+		
 
+	model.removeDishFromMenu(1);
+	model.removeDishFromMenu(202);*/
+	
 	var menu = model.getFullMenu();
 	var total_price = model.getTotalMenuPrice(); 
 	var number= model.getNumberOfGuests();
