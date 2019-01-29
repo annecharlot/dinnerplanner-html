@@ -2,7 +2,7 @@ $(function() {
 
 	var model = new DinnerModel();
 	
-	var exampleView = new ExampleView($("#exampleView"), model);
+	var exampleView = new Mydinner($("#Mydinner"), model);
 
 	var itemView = new ItemView($("#itemView"), model);
 
@@ -17,7 +17,7 @@ $(function() {
 	var dishsearchview = new DishSearchView($("#DishSearchView"), model);
 
 
-$("#exampleView").hide();
+/** $("#Mydinner").hide();
 $("#itemView").hide();
 $("#ItemimgView").hide();
 $("#detailView").hide();
@@ -50,13 +50,15 @@ function dishdetails(){
 }
 
 function dinneroverview(){
-	$("#exampleView").show();
+	$("#Mydinner").show();
 	$("#ItemimgView").show();
 }
 
 function dinnerprintout(){
-	$("#exampleView").show();
+	$("#Mydinner").show();
 	$("#itemView").show();
 }
+
+selectdishagain();*/
 
 });

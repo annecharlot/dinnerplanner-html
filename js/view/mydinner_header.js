@@ -1,5 +1,5 @@
 
-var ExampleView = function (container, model) {
+var Mydinner = function (container, model) {
 
 var numberOfGuests = container.find("#numberOfGuests");
 var onlynumber = container.find("#number");
