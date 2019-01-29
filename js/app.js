@@ -38,8 +38,6 @@ function selectdish(){
 	$("#DishSearchView").show();
 }
 
-selectdishagain();
-
 function selectdishagain(){
 	$("#selectdishagain").show();
 	$("#sidesbarview").show();

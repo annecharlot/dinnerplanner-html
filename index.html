@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home</title>
+    <title>Index</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
@@ -16,6 +16,32 @@
       <h1><b>Dinner Planner</b></h1>
   </div>
 
+
+<!-- SIDEBAR -->
+
+<button class="btn1 visible-xs" type="button" data-toggle="collapse" data-target="#toggle">Sidebar</button>
+      <div id="sidesbarview" class="col-md-2" style="border: 1px solid black;">
+          <span id="sidebar"></span>
+      </div>
+
+
+<!-- DISHSEARCH -->
+
+  <div class="col-xs-10 col-md-10" id="DishSearchView">
+          <span id="searchfield"></span>
+          <div class="row">
+              <span id="dishsearch"></span>
+          </div>
+      </div>
+
+
+<!-- ExampleView -->
+
+<div class="container" id="exampleView">
+    <span id="numberOfGuests"></span>
+</div>
+
+
 <!-- HOME -->
 
   <div id="WelcomeView" class="container-fluid text-center "> 
@@ -23,24 +49,9 @@
   </div>
 
 <!-- SELECT DISH -->
-  
-  <button class="btn1 visible-xs" type="button" data-toggle="collapse" data-target="#toggle">Sidebar</button>
-      <div id="sidesbarview" class="col-md-2" style="border: 1px solid black;">
-          <span id="sidebar"></span>
-      </div>
-
-  <div class="col-xs-10 col-md-10" id="DishSearchView">
-          <!-- search -->
-          
-          <span id="searchfield"></span>
-          <div class="row">
-              <span id="dishsearch"></span>
-          </div>
-      </div>
 
   <div class="container-fluid" id="selectdish">
     <div class="row">
-
       <h4>FIND A DISH</h4>
     </div>
   </div>
@@ -49,9 +60,10 @@
 
 
 <div class="container-fluid" id="selectdishagain">
+  
   <div class="row">
     <h4>ADD ANOTHER ONE</h4>
-
+    
   </div>
 </div>
 
@@ -60,7 +72,6 @@
 <div class="container-fluid" id="detailView">
     
   <div class="row">
-    
     <div class="col-xs-12 col-md-5">
       <span id="item"></span>
     </div>
@@ -89,10 +100,6 @@
 
 <!-- DINNER OVERVIEW -->
 
-<div class="container" id="exampleView">
-    <span id="numberOfGuests"></span>
-</div>
-
 <div class="container text-center" id="ItemimgView">
   <hr class="divider" style="border-bottom: 1px solid black;"/>
   <!-- full menu image, namn, price & full total price -->
@@ -116,14 +123,11 @@
 
 <!-- DINNER PRINTOUT -->
 
-<div class="container" id="exampleView">
-    <span id="numberOfGuests"></span>
-    <hr class="divider" style="border-bottom: 1px solid black;"/>
-</div>
-
 <div class="container" id="itemView">
+  <hr class="divider" style="border-bottom: 1px solid black;"/>
     <span id="fullitem"></span>
 </div>
+
 
 <!-- SCRIPT -->
   
