@@ -17,7 +17,6 @@ $(function() {
 	var dishsearchview = new DishSearchView($("#DishSearchView"), model);
 
 
-
 $("#exampleView").hide();
 $("#itemView").hide();
 $("#ItemimgView").hide();
