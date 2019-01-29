@@ -12,7 +12,7 @@ var ItemView = function (container, model) {
 
 	for (let dsh of menu) { 
 		
-		var img = "///Users/annecharlot/Documents/KTH/ÅK3/interaktionsprogrammering/GitHub/dinnerplanner-html/images/" + dsh.image;
+		var img = "images/" + dsh.image;
 
 		var source= "<img src='" + img + "'style='outline: 1px solid black;'/>" ; 
 
