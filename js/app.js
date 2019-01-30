@@ -34,6 +34,8 @@ $(function() {
 
 	var searchbuttoncontroller = new SearchButtonController(dishsearchview, model, this);
 
+	var addtomenucontroller = new AddToMenuController(detailView, model, this);
+
 	//* general state controller */
 
 	function hideallviews(){

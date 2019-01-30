@@ -7,6 +7,7 @@ var DetailView = function (container, model) {
 	var item = container.find("#item");
 	var totalprice = container.find("#totalprice");
 	var guests = container.find("#number");
+	var addmenubutton = container.find("#addbutton");
 	
 	var dsh = model.getDish(1);
 
@@ -43,6 +44,14 @@ var DetailView = function (container, model) {
 
 	totalprice.html(price);
 	guests.html(number);
+
+	button = "<button id='add' class='btn' style='background-color: rgba(244, 179, 80, 1); border: black; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);'>"
+            + "Add to menu</button>"
+
+
+    addmenubutton.html(button);
+
+    this.addbutton = addmenubutton.find("#add")
 }
 
 this.update();
