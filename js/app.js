@@ -28,6 +28,11 @@ $(function() {
 
 	var confirmdinnercontroller = new ConfirmDinnerController(sidebar, model, this);
 
+	var printfullrecipecontroller = new PrintFullRecipeController(ItemimgView, model, this);
+
+	var itembuttoncontroller = new ItemButtonController(dishsearchview , model, this);
+
+	var searchbuttoncontroller = new SearchButtonController(dishsearchview, model, this);
 
 	//* general state controller */
 
@@ -50,36 +55,38 @@ $(function() {
 		$("#WelcomeView").show();
 	}
 
-	function selectdish(){
+	this.selectdish = function(){
 		hideallviews();
 		$("#selectdish").show();
 		$("#sidesbarview").show();
 		$("#DishSearchView").show();
 	}
 
-	function selectdishagain(){
+	this.selectdishagain = function(){
 		hideallviews();
 		$("#selectdishagain").show();
 		$("#sidesbarview").show();
 		$("#DishSearchView").show();
 	}
 
-	function dishdetails(){
+	this.dishdetails = function(){
 		hideallviews();
 		$("#detailView").show();
 		$("#sidesbarview").show();
 	}
 
-	function dinneroverview(){
+	this.dinneroverview = function(){
 		hideallviews();
 		$("#Mydinner").show();
 		$("#ItemimgView").show();
 	}
 
-	function dinnerprintout(){
+	this.dinnerprintout = function(){
 		hideallviews();
 		$("#Mydinner").show();
 		$("#itemView").show();
 	}
+
+showwelcomeview();
 
 });
