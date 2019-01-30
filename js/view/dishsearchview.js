@@ -1,11 +1,11 @@
 
 var DishSearchView = function (container, model) {
 	
+	this.update = function(){
+
 	var dishsearch = container.find("#dishsearch");
 	var searchfield = container.find("#searchfield");
 
-	model.addDishToMenu(1);
-	model.addDishToMenu(2);
 
 	var full = "";
 	var type = model.getSelectedDishTotal('starter');
@@ -29,6 +29,11 @@ var DishSearchView = function (container, model) {
 	+ "</div></div><hr class='divider' style='border: 1px solid black;'/>";
 	
 	searchfield.html(field);
+
+}
+
+this.update();
+model.addObserver(this);
 
 	}
 

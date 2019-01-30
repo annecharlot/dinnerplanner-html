@@ -1,6 +1,8 @@
 
 var DetailView = function (container, model) {
 
+	this.update = function(){
+
 	var ingredientlist = container.find("#ingredients");
 	var item = container.find("#item");
 	var totalprice = container.find("#totalprice");
@@ -18,6 +20,7 @@ var DetailView = function (container, model) {
     + "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>";
 
     item.html(source);
+    this.backtosearch = item.find("#backtosearch");
 
 	var list = dsh.ingredients;
 
@@ -40,6 +43,10 @@ var DetailView = function (container, model) {
 
 	totalprice.html(price);
 	guests.html(number);
+}
+
+this.update();
+model.addObserver(this);
 
 }
  

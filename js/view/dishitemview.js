@@ -1,10 +1,10 @@
 
 var ItemView = function (container, model) {
 
+	this.update = function() {
+
 	var fullitem = container.find("#fullitem");
 	
-	model.addDishToMenu(202);
-	model.addDishToMenu(1);
 
 	var menu = model.getFullMenu();
 
@@ -26,5 +26,9 @@ var ItemView = function (container, model) {
 		
 	};
 	fullitem.html(full);
+}
+
+this.update();
+model.addObserver(this);
 }
  

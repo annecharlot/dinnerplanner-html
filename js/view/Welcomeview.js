@@ -1,7 +1,8 @@
 
 var WelcomeView = function (container, model) {
 	
-	var welcome = container.find("#welcome");
+	this.update = function (){
+		var welcome = container.find("#welcome");
 
 	var view = "<div class='row'><div class='col-md-4 col-md-offset-4 col-xs-12' style='padding:40px 0 40px 0;'>"
 	+ "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt"
@@ -13,5 +14,10 @@ var WelcomeView = function (container, model) {
 	welcome.html(view);
 
 	this.createdinner = welcome.find("#createdinner");
+
+}
+
+this.update();
+model.addObserver(this);
 }
  

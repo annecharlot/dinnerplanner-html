@@ -1,6 +1,8 @@
 
 var ItemImgView = function (container, model) {
 	
+	this.update = function(){
+
 	var dishimg = container.find("#dishitem");
 	var dishprice = container.find("#dishprice");
 	var menuprice = container.find("#totalmenuprice");
@@ -28,6 +30,11 @@ var ItemImgView = function (container, model) {
 
 	dishimg.html(source);
 	menuprice.html(totalprice);
+
+}
+
+this.update();
+model.addObserver(this);
 
 }
  

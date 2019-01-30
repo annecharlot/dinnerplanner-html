@@ -1,6 +1,8 @@
 
 var SidebarView = function (container, model) {
 	
+	this.update = function() {
+
 	var sidebar = container.find("#sidebar");
 
 	/** 
@@ -51,6 +53,12 @@ var SidebarView = function (container, model) {
 		sidebar.html(fullbar);
 	}
 	
+	this.confirm = sidebar.find("#confirm");
+
+}
+
+this.update();
+model.addObserver(this);
 
 	
 }

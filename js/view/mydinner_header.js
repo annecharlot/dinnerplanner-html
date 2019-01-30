@@ -1,11 +1,11 @@
 
 var Mydinner = function (container, model) {
 
-
+	this.update = function() {
 	var numberOfGuests = container.find("#numberOfGuests");
 	var onlynumber = container.find("#number");
 
-	model.setNumberOfGuests(3);
+
 	var number = model.getNumberOfGuests();
 
 	var text = "<div class='row'><div class='col-xs-12 col-md-8'>"
@@ -17,5 +17,12 @@ var Mydinner = function (container, model) {
 	numberOfGuests.html(text);
 	onlynumber.html(number); 
 
+	this.backandedit = numberOfGuests.find("#backandedit");
+
+	}
+	
+
+this.update();
+model.addObserver(this);
 
 }

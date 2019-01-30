@@ -4,7 +4,7 @@ $(function() {
 
 	var model = new DinnerModel();
 	
-	var exampleView = new Mydinner($("#Mydinner"), model);
+	var mydinner = new Mydinner($("#Mydinner"), model);
 
 	var itemView = new ItemView($("#itemView"), model);
 
@@ -22,11 +22,11 @@ $(function() {
 
 	var welcomecontroller = new WelcomeViewController(welcomeview, model, this);
 
-	var backandeditcontroller = new BackandEditController(ItemimgView, itemView, model, this);
+	var backandeditcontroller = new BackandEditController(mydinner, model, this);
 
 	var backtosearchcontroller = new BacktoSearchController(detailView, model, this);
 
-	var confirmdinnercontroller = new ConfirmDinnerController(sidesbarview, model, this);
+	var confirmdinnercontroller = new ConfirmDinnerController(sidebar, model, this);
 
 
 	//* general state controller */
