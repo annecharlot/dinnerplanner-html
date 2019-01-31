@@ -17,7 +17,8 @@ var DishSearchView = function (container, model) {
 			dishsearch.html(full);
 			this.itembutton = dishsearch.find("#itembutton");
 			//* this.itembutton = dishsearch.find("#dsh.id")
-			//*this.dsh_id = dsh.id;
+			//*this.dsh_id = dsh.id; 
+			//*skicka den till model.setactivedish(dsh.id);
 		}
 
 
