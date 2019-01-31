@@ -31,13 +31,8 @@ var ItemImgView = function (container, model) {
 
 	dishimg.html(source);
 	menuprice.html(totalprice);
-	
-	var button = "<button id='print' class='btn' style='background-color: rgba(244, 179, 80, 1); border: black; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);'>"
-        + "Print Full Recipe</button>";
 
-    printbutton.html(button);
-
-	this.print = printbutton.find("#print");
+	this.print = container.find("#print");
 
 }
 

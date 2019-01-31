@@ -7,6 +7,7 @@ var SidebarView = function (container, model) {
 	var guestnumber = container.find("#guestnumber");
 	var minusbutton = container.find("#minusGuest");
 	var plusbutton = container.find("#plusGuest");
+	var confirmbutton = container.find("#confirm");
 
 	var menu = model.getFullMenu();
 	var total_price = model.getTotalMenuPrice(); 
@@ -41,14 +42,14 @@ var SidebarView = function (container, model) {
         + "<div class='col-xs-6 col-md-6'></div>"
         + "<div class='col-xs-4 col-md-6'>SEK " + total_price + "</div></div>";
 
-		fullbar += "<hr class='divider'/><button id='confirm' class='btn' style='background-color: rgba(244, 179, 80, 1);"
-		+ "border: black; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);''>Confirm Dinner</button>";
+		fullbar += "<hr class='divider'/>";
 		sidebar.html(fullbar);
 	}
 	
 	this.confirm = sidebar.find("#confirm");
 	this.minusGuest = minusbutton;
 	this.plusGuest = plusbutton;
+	this.confirm = confirmbutton;
 
 }
 

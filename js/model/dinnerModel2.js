@@ -10,7 +10,7 @@ class DinnerModel {
 	const menuconst = [];
 	this.menu = menuconst;
 
-	this.number = 0;
+	this.number = 1;
 
 	this._observers = [];
 
@@ -29,7 +29,13 @@ class DinnerModel {
 
 	setNumberOfGuests(num) {
 		//TODO Lab 1
-		this.number = num;
+		if (num<1){
+			this.number = 1;
+		}
+
+		else{
+			this.number = num;
+		}
 		this.notifyObservers();
 		
 	}
