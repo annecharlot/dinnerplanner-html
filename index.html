@@ -21,8 +21,18 @@
 
 <button class="btn1 visible-xs" type="button" data-toggle="collapse" data-target="#toggle">=</button>
       <div id="sidesbarview" class="col-md-2" style="border: 1px solid black;">
-          <span id="sidebar"></span>
-      </div>
+          <div class='collapse in' id='toggle'><h3>My Dinner</h3>
+            <div class='row'>
+              <div class='col-xs-6 col-md-6'>People</div>
+              <div class='col-xs-6 col-md-6'>
+                <button id='minusGuest' class='btn'>-</button>
+                <span id="guestnumber"></span>
+                <button id='plusGuest' class='btn'>+</button>
+              </div>
+            </div>
+                <span id="sidebar"></span>
+          </div>
+        </div>
 
 
 <!-- DISHSEARCH -->
@@ -143,6 +153,7 @@
 <script src="js/controllers/itembutton_controller.js"></script>
 <script src="js/controllers/searchbutton_controller.js"></script>
 <script src="js/controllers/addtomenu_controller.js"></script>
+<script src="js/controllers/plusminus_controller.js"></script>
 
   </body>
 </html>

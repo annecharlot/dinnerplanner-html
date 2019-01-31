@@ -30,7 +30,7 @@ class DinnerModel {
 	setNumberOfGuests(num) {
 		//TODO Lab 1
 		this.number = num;
-		this.notifyObservers("number");
+		this.notifyObservers();
 		
 	}
 	
@@ -97,7 +97,7 @@ class DinnerModel {
 		}
 	    }
 	    this.menu.push(this.getDish(id));
-	    this.notifyObservers("menu");
+	    this.notifyObservers();
 
 	}
 
@@ -106,7 +106,7 @@ class DinnerModel {
 		//TODO Lab 1
 		var menu = this.menu;
 		menu.splice(menu.indexOf(id), 1);
-		this.notifyObservers("menu");
+		this.notifyObservers();
 	}
 
     

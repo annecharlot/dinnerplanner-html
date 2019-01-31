@@ -52,6 +52,7 @@ var DetailView = function (container, model) {
     addmenubutton.html(button);
 
     this.addbutton = addmenubutton.find("#add")
+    this.dsh_id = dsh.id;
 }
 
 this.update();

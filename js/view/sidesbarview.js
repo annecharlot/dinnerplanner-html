@@ -4,24 +4,17 @@ var SidebarView = function (container, model) {
 	this.update = function() {
 
 	var sidebar = container.find("#sidebar");
-
-	/** 
-	this.plusButton = container.find("#plusGuest");
-	this.minusButton = container.find("#minusGuest");
-		
-
-	model.removeDishFromMenu(1);
-	model.removeDishFromMenu(202);*/
+	var guestnumber = container.find("#guestnumber");
+	var minusbutton = container.find("#minusGuest");
+	var plusbutton = container.find("#plusGuest");
 
 	var menu = model.getFullMenu();
 	var total_price = model.getTotalMenuPrice(); 
 	var number= model.getNumberOfGuests();
+
+	guestnumber.html(number);
 	
-	var fullbar = "<div class='collapse in' id='toggle'><h3>My Dinner</h3>"
-	+ "<div class='row'><div class='col-xs-6 col-md-6'>"
-	+ "People</div><div class='col-xs-6 col-md-6'>"
-	+ "<input type='number' value='" + number + "' style='width: 40px;'></input></div></div>"
-	+ "<hr class='divider' style='border-bottom: 1px solid black;'/>"
+	var fullbar = "<hr class='divider' style='border-bottom: 1px solid black;'/>"
 	+ "<div class='row'><div class='col-xs-6 col-md-6'>Dish Name</div>"
 	+ "<div class='col-xs-4 col-md-6'>Cost</div></div>"
 	+ "<hr class='divider' style='border-bottom: 1px solid black;'/>"
@@ -49,11 +42,13 @@ var SidebarView = function (container, model) {
         + "<div class='col-xs-4 col-md-6'>SEK " + total_price + "</div></div>";
 
 		fullbar += "<hr class='divider'/><button id='confirm' class='btn' style='background-color: rgba(244, 179, 80, 1);"
-		+ "border: black; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);''>Confirm Dinner</button></div>";
+		+ "border: black; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);''>Confirm Dinner</button>";
 		sidebar.html(fullbar);
 	}
 	
 	this.confirm = sidebar.find("#confirm");
+	this.minusGuest = minusbutton;
+	this.plusGuest = plusbutton;
 
 }
 

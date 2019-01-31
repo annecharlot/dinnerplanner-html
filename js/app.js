@@ -36,6 +36,8 @@ $(function() {
 
 	var addtomenucontroller = new AddToMenuController(detailView, model, this);
 
+	var plusminuscontroller = new PlusMinusController(sidebar, model, this);
+
 	//* general state controller */
 
 	function hideallviews(){
