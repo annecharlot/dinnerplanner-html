@@ -30,7 +30,7 @@ $(function() {
 
 	var printfullrecipecontroller = new PrintFullRecipeController(ItemimgView, model, this);
 
-	var itembuttoncontroller = new ItemButtonController(dishsearchview , model, this);
+	var itembuttoncontroller = new ItemButtonController(dishsearchview , model, this /** dishsearchview.dsh_id */);
 
 	var searchbuttoncontroller = new SearchButtonController(dishsearchview, model, this);
 
@@ -54,7 +54,7 @@ $(function() {
 
 	}
 
-	function showwelcomeview() {
+	this.showwelcomeview = function() {
 		hideallviews();
 		$("#WelcomeView").show();
 	}
@@ -91,6 +91,6 @@ $(function() {
 		$("#itemView").show();
 	}
 
-showwelcomeview();
+this.showwelcomeview();
 
 });

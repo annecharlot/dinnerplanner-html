@@ -14,6 +14,8 @@ class DinnerModel {
 
 	this._observers = [];
 
+	//* this.activedish = [];
+
     }
 
     addObserver(observer){
@@ -26,6 +28,15 @@ class DinnerModel {
            }	
      }
 
+     /** setactivedish(id) {
+     	this.activedish.push(getDish(id));
+     } 
+
+     getactivedish() {
+     	for (let dsh of this.activedish) {
+     		return dsh;
+     	}
+     } */
 
 	setNumberOfGuests(num) {
 		//TODO Lab 1
