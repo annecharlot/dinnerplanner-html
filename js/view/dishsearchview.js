@@ -1,6 +1,26 @@
 
 var DishSearchView = function (container, model) {
 	
+	/** 
+var SearchView = function(container, model, app){  lägg till "this" som parameter i app.js när du skapar searchviewn?
+this.dishItems = []; -> inte nödvändig?
+
+this.update = function() {
+searchResults = model.getAllDishes(type,filter);
+for(var key in searchResults) {
+var dishItem = $('create HTML for dish');
+new DishItemController(dishItem, searchResults[key], app);  
++ htmla ut det i dishsearch?    
+}  
+}}
+
+// dishItemController.js 
+var DishItemController = function(item, dish, app) {  
+item.click(function()
+{      
+app.showDishDetails(dish.id);  lägg alltså till parameter i dishdetailsviewn!
+})}*/
+
 	this.update = function(){
 
 	var dishsearch = container.find("#dishsearch");
@@ -30,5 +50,6 @@ this.update();
 model.addObserver(this);
 
 	}
+
 
  
