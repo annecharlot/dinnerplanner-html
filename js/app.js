@@ -72,7 +72,7 @@ $(function() {
 
 	this.dishdetails = function(id){
 		this.hideallviews();
-		detailView.update(id);
+		detailView.choosedish(id);
 		$("#detailView").show();
 		$("#sidesbarview").show();
 	}

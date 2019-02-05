@@ -1,12 +1,15 @@
 
 var DetailView = function (container, model) {
 
-	/**this.id = 1;
-	this.choosedish = function(idx) {
-		this.id = idx;
-	}*/
+	this.id = 1;
 
-	this.update = function(id){
+
+
+	this.choosedish = function(idx) {
+		this.id = idx;	
+}
+
+	this.update = function(){
 
 	var ingredientlist = container.find("#ingredients");
 	var item = container.find("#item");
@@ -16,7 +19,7 @@ var DetailView = function (container, model) {
 
 	this.backtosearch = container.find("#backtosearch");
 	
-	var dsh = model.getDish(id);
+	var dsh = model.getDish(this.id);
 
 	var img = "images/" + dsh.image;
 
@@ -52,7 +55,7 @@ var DetailView = function (container, model) {
     this.dsh_id = dsh.id;
 }
 
-this.update(1);
+this.update();
 model.addObserver(this);
 
 }
