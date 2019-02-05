@@ -10,7 +10,7 @@ $(function() {
 
 	var ItemimgView = new ItemImgView($("#ItemimgView"), model);
 
-	var detailView = new DetailView($("#detailView"), model);
+	this.detailView = new DetailView($("#detailView"), model);
 
 	var sidebar = new SidebarView($("#sidesbarview"), model);
 
@@ -24,7 +24,7 @@ $(function() {
 
 	var backandeditcontroller = new BackandEditController(mydinner, model, this);
 
-	var backtosearchcontroller = new BacktoSearchController(detailView, model, this);
+	var backtosearchcontroller = new BacktoSearchController(this.detailView, model, this);
 
 	var sidebarcontroller = new SideBarController(sidebar, model, this);
 
@@ -32,7 +32,7 @@ $(function() {
 
 	var searchbuttoncontroller = new SearchButtonController(dishsearchview, model, this);
 
-	var addtomenucontroller = new AddToMenuController(detailView, model, this);
+	var addtomenucontroller = new AddToMenuController(this.detailView, model, this);
 
 
 	//* general state controller */
@@ -72,7 +72,7 @@ $(function() {
 
 	this.dishdetails = function(id){
 		this.hideallviews();
-		detailView.choosedish(id);
+		this.detailView.choosedish(id);
 		$("#detailView").show();
 		$("#sidesbarview").show();
 	}

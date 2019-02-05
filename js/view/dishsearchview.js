@@ -6,8 +6,6 @@ var DishSearchView = function (container, model, app) {
 
 	var dishsearch = container.find("#dishsearch");
 
-
-	var full = "";
 	var type = model.getAllDishesTotal();
 
 	for(let dsh of type){
