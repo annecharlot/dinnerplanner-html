@@ -47,7 +47,7 @@ class DinnerModel {
 		else{
 			this.number = num;
 		}
-		this.notifyObservers("numberOfGuests");
+		this.notifyObservers();
 		
 	}
 	

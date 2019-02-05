@@ -6,9 +6,18 @@ var DishSearchView = function (container, model, app) {
 
 	var dishsearch = container.find("#dishsearch");
 
-	var type = model.getAllDishesTotal();
+	var value = document.getElementById("myoption").value;
+	var keyword = document.getElementById("keyword").value;
 
-	for(let dsh of type){
+	if (value == "All") {
+		this.type = model.getAllDishesTotal();
+	}
+
+	else {
+		this.type = model.getAllDishes(value);
+	}
+
+	for(let dsh of this.type){
 			
 			var img = "images/" + dsh.image;
 			item = "<div id='" + dsh.id + "' class='col-xs-12 col-md-2'><img src='" + img + "'style='outline: 1px solid black;'/>" + "<h4>" + dsh.name + "</h4></div>"; 
