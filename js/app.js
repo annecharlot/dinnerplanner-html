@@ -16,7 +16,7 @@ $(function() {
 
 	var welcomeview = new WelcomeView($("#WelcomeView"), model);
 
-	var dishsearchview = new DishSearchView($("#DishSearchView"), model);
+	var dishsearchview = new DishSearchView($("#DishSearchView"), model, this);
 
 	//* Controllers */
 
@@ -26,21 +26,18 @@ $(function() {
 
 	var backtosearchcontroller = new BacktoSearchController(detailView, model, this);
 
-	var confirmdinnercontroller = new ConfirmDinnerController(sidebar, model, this);
+	var sidebarcontroller = new SideBarController(sidebar, model, this);
 
 	var printfullrecipecontroller = new PrintFullRecipeController(ItemimgView, model, this);
-
-	var itembuttoncontroller = new ItemButtonController(dishsearchview , model, this /** dishsearchview.dsh_id */);
 
 	var searchbuttoncontroller = new SearchButtonController(dishsearchview, model, this);
 
 	var addtomenucontroller = new AddToMenuController(detailView, model, this);
 
-	var plusminuscontroller = new PlusMinusController(sidebar, model, this);
 
 	//* general state controller */
 
-	function hideallviews(){
+	this.hideallviews = function(){
 
 	$("#Mydinner").hide();
 	$("#itemView").hide();
@@ -55,38 +52,39 @@ $(function() {
 	}
 
 	this.showwelcomeview = function() {
-		hideallviews();
+		this.hideallviews();
 		$("#WelcomeView").show();
 	}
 
 	this.selectdish = function(){
-		hideallviews();
+		this.hideallviews();
 		$("#selectdish").show();
 		$("#sidesbarview").show();
 		$("#DishSearchView").show();
 	}
 
 	this.selectdishagain = function(){
-		hideallviews();
+		this.hideallviews();
 		$("#selectdishagain").show();
 		$("#sidesbarview").show();
 		$("#DishSearchView").show();
 	}
 
-	this.dishdetails = function(){
-		hideallviews();
+	this.dishdetails = function(id){
+		this.hideallviews();
+		detailView.update(id);
 		$("#detailView").show();
 		$("#sidesbarview").show();
 	}
 
 	this.dinneroverview = function(){
-		hideallviews();
+		this.hideallviews();
 		$("#Mydinner").show();
 		$("#ItemimgView").show();
 	}
 
 	this.dinnerprintout = function(){
-		hideallviews();
+		this.hideallviews();
 		$("#Mydinner").show();
 		$("#itemView").show();
 	}

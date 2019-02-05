@@ -1,7 +1,12 @@
 
 var DetailView = function (container, model) {
 
-	this.update = function(){
+	/**this.id = 1;
+	this.choosedish = function(idx) {
+		this.id = idx;
+	}*/
+
+	this.update = function(id){
 
 	var ingredientlist = container.find("#ingredients");
 	var item = container.find("#item");
@@ -11,7 +16,7 @@ var DetailView = function (container, model) {
 
 	this.backtosearch = container.find("#backtosearch");
 	
-	var dsh = model.getDish(1);
+	var dsh = model.getDish(id);
 
 	var img = "images/" + dsh.image;
 
@@ -47,7 +52,7 @@ var DetailView = function (container, model) {
     this.dsh_id = dsh.id;
 }
 
-this.update();
+this.update(1);
 model.addObserver(this);
 
 }

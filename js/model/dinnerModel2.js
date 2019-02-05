@@ -47,7 +47,7 @@ class DinnerModel {
 		else{
 			this.number = num;
 		}
-		this.notifyObservers();
+		this.notifyObservers("numberOfGuests");
 		
 	}
 	
@@ -66,6 +66,10 @@ class DinnerModel {
 		}
 	    }
 
+	}
+
+	getAllDishesTotal() {
+		return this.dishes;
 	}
 
 	getSelectedDishTotal(type){

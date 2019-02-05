@@ -1,25 +1,6 @@
 
-var DishSearchView = function (container, model) {
+var DishSearchView = function (container, model, app) {
 	
-	/** 
-var SearchView = function(container, model, app){  lägg till "this" som parameter i app.js när du skapar searchviewn?
-this.dishItems = []; -> inte nödvändig?
-
-this.update = function() {
-searchResults = model.getAllDishes(type,filter);
-for(var key in searchResults) {
-var dishItem = $('create HTML for dish');
-new DishItemController(dishItem, searchResults[key], app);  
-+ htmla ut det i dishsearch?    
-}  
-}}
-
-// dishItemController.js 
-var DishItemController = function(item, dish, app) {  
-item.click(function()
-{      
-app.showDishDetails(dish.id);  lägg alltså till parameter i dishdetailsviewn!
-})}*/
 
 	this.update = function(){
 
@@ -27,18 +8,19 @@ app.showDishDetails(dish.id);  lägg alltså till parameter i dishdetailsviewn!
 
 
 	var full = "";
-	var type = model.getSelectedDishTotal('starter');
+	var type = model.getAllDishesTotal();
 
 	for(let dsh of type){
 			
 			var img = "images/" + dsh.image;
-			full += "<div id='itembutton' class='col-xs-12 col-md-2'><img src='" + img + "'style='outline: 1px solid black;'/>" + "<h4>" + dsh.name + "</h4></div>"; 
+			item = "<div id='" + dsh.id + "' class='col-xs-12 col-md-2'><img src='" + img + "'style='outline: 1px solid black;'/>" + "<h4>" + dsh.name + "</h4></div>"; 
 				      
-			dishsearch.html(full);
-			this.itembutton = dishsearch.find("#itembutton");
-			//* this.itembutton = dishsearch.find("#dsh.id")
-			//*this.dsh_id = dsh.id; 
-			//*skicka den till model.setactivedish(dsh.id);
+			dishsearch.append(item);
+
+			let itembutton = dishsearch.find("#" + dsh.id)[0];
+
+			new ItemButtonController(itembutton, dsh.id, app);
+
 		}
 
 
