@@ -114,8 +114,9 @@ class DinnerModel {
 		//TODO Lab 1 
 		var new_dish = this.getDish(id);
 		for(let dsh of this.menu){
-		if (dsh.type == new_dish.type) {
-			this.menu.splice(this.menu.indexOf(dsh.id), 1);
+		if (dsh.type === new_dish.type) {
+			var index = this.menu.indexOf(dsh);
+			this.menu.splice(index, 1);
 		}
 	    }
 	    this.menu.push(new_dish);
