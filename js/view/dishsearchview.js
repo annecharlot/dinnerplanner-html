@@ -9,14 +9,21 @@ var DishSearchView = function (container, model, app) {
 	var value = document.getElementById("myoption").value;
 	var keyword = document.getElementById("keyword").value;
 
-	if (value == "All") {
+	if (keyword == "") {
+		if (value == "All") {
 		this.type = model.getAllDishesTotal();
+		}
+
+		else {
+			this.type = model.getAllDishes(value);
+		}
+
 	}
 
 	else {
-		this.type = model.getAllDishes(value);
+		this.type = model.getAllDishes(value, keyword);
 	}
-
+	
 	dishsearch.html("");
 
 	for(let dsh of this.type){
