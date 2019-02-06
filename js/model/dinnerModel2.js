@@ -112,12 +112,13 @@ class DinnerModel {
 	//it is removed from the menu and the new one added.
 	addDishToMenu(id) {
 		//TODO Lab 1 
+		var new_dish = this.getDish(id);
 		for(let dsh of this.menu){
-		if(dsh.id == id) {
-		    this.menu.splice(this.menu.indexOf(id), 1);
+		if (dsh.type == new_dish.type) {
+			this.menu.splice(this.menu.indexOf(dsh.id), 1);
 		}
 	    }
-	    this.menu.push(this.getDish(id));
+	    this.menu.push(new_dish);
 	    this.notifyObservers();
 
 	}
