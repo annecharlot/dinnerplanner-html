@@ -17,6 +17,8 @@ var DishSearchView = function (container, model, app) {
 		this.type = model.getAllDishes(value);
 	}
 
+	dishsearch.html("");
+
 	for(let dsh of this.type){
 			
 			var img = "images/" + dsh.image;
