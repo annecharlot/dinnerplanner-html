@@ -21,6 +21,12 @@ var DetailView = function (container, model) {
 	
 	var dsh = model.getDish(this.id);
 
+	//** model.getDish(this.id).then(dish => {
+     	/* do something with new dishes 
+	}).catch( error => {
+     	/* do something with the error 
+	}); */
+
 	var img = "images/" + dsh.image;
 
 	var source= "<h2>" + dsh.name + "</h2>" + "<img src='" + img + "'style='outline: 1px solid black;'/>"
