@@ -25,7 +25,7 @@ var DetailView = function (container, model) {
 		// do something with new dishes
 		var dsh = data.results;
 
-		var img = "images/" + dsh.image;
+		var img = "https://spoonacular.com/recipeImages/" + dsh.image;
 
 		var source= "<h2>" + dsh.name + "</h2>" + "<img src='" + img + "'style='outline: 1px solid black;'/>"
 		+ "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>";
