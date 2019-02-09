@@ -29,7 +29,7 @@ var DishSearchView = function (container, model, app) {
 	else {
 		//this.type = model.getAllDishes(value, keyword);
 		model.getAllDishes(value, keyword).then(data => {
-			this.type = data.results
+			this.type = data;
      		// do something with new dishes
 			}).catch( error => {
      			// do something with the error 
@@ -40,8 +40,8 @@ var DishSearchView = function (container, model, app) {
 
 	for(let dsh of this.type){
 			
-			var img = "images/" + dsh.image;
-			item = "<div id='" + dsh.id + "' class='col-xs-12 col-md-2'><img src='" + img + "'style='outline: 1px solid black;'/>" + "<h4>" + dsh.name + "</h4></div>"; 
+			var img = "https://spoonacular.com/recipeImages/" + dsh.image;
+			item = "<div id='" + dsh.id + "' class='col-xs-12 col-md-2'><img src='" + img + "'style='outline: 1px solid black;'/>" + "<h4>" + dsh.title + "</h4></div>"; 
 				      
 			dishsearch.append(item);
 

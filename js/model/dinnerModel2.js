@@ -139,7 +139,7 @@ class DinnerModel {
 	getAllDishes(type,filter) {
 	    return fetch(`https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?type=${type}`,{ 
             headers:{   
-                'X-Mashape-Key': API
+                'X-Mashape-Key': API_KEY
             }
       }).then(response => response.json())
         .then(data => data)
@@ -150,7 +150,7 @@ class DinnerModel {
 	getDish (id) {
 	      return fetch(`https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/${id}/information?includeNutrition=false`,{ 
             headers:{   
-                'X-Mashape-Key': API
+                'X-Mashape-Key': API_KEY
             }
       }).then(response => response.json())
         .then(data => data)
