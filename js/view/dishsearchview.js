@@ -15,23 +15,25 @@ var DishSearchView = function (container, model, app) {
 		}
 
 		else {
-			this.type = model.getAllDishes(value);
-			//* model.getAllDishes(value).then(dishes => {
-     		/* do something with new dishes
+			//this.type = model.getAllDishes(value);
+			model.getAllDishes(value).then(data => {
+     		// do something with new dishes
+     		this.type = data.results
 			}).catch( error => {
-     			/* do something with the error 
-			}); */
+     			// do something with the error 
+			}); 
 		}
 
 	}
 
 	else {
-		this.type = model.getAllDishes(value, keyword);
-		//* model.getAllDishes(value, keyword).then(dishes => {
-     		/* do something with new dishes
+		//this.type = model.getAllDishes(value, keyword);
+		model.getAllDishes(value, keyword).then(data => {
+			this.type = data.results
+     		// do something with new dishes
 			}).catch( error => {
-     			/* do something with the error 
-			}); */
+     			// do something with the error 
+			});
 	}
 	
 	dishsearch.html("");

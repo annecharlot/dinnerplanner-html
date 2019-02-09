@@ -5,7 +5,6 @@ var ItemView = function (container, model) {
 
 	var fullitem = container.find("#fullitem");
 	
-
 	var menu = model.getFullMenu();
 
 	var full="";
