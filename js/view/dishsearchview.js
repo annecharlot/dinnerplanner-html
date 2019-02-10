@@ -6,12 +6,13 @@ var DishSearchView = function (container, model, app) {
 
 	var dishsearch = container.find("#dishsearch");
 	var loader = container.find("#loader");
+	var error = container.find("#error");
 
 	var value = document.getElementById("myoption").value;
 	var keyword = document.getElementById("keyword").value;
 
 	loader.show();
-	
+	error.hide();
 
 	if (keyword == "") {
 		if (value == "All") {
@@ -25,6 +26,7 @@ var DishSearchView = function (container, model, app) {
      		this.type = data.results
 			}).catch( error => {
      			// do something with the error 
+     			error.show();
 			}); 
 		}
 
@@ -37,6 +39,7 @@ var DishSearchView = function (container, model, app) {
      		// do something with new dishes
 			}).catch( error => {
      			// do something with the error 
+     			error.show();
 			});
 	}
 	
