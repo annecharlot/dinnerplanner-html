@@ -101,9 +101,7 @@ class DinnerModel {
 		//TODO Lab 1
 		var price = 0;
 		for(let dsh of this.menu){
-			for(let ing of dsh.ingredients){
-				price += ing.price * this.number;
-			}
+			price += Math.round(dsh.pricePerServing*this.getNumberOfGuests());
 		}
 		return price;
 	}
@@ -112,15 +110,13 @@ class DinnerModel {
 	//it is removed from the menu and the new one added.
 	addDishToMenu(id) {
 		//TODO Lab 1 
-		var new_dish = this.getDish(id);
-		for(let dsh of this.menu){
-		if (dsh.type === new_dish.type) {
-			var index = this.menu.indexOf(dsh);
-			this.menu.splice(index, 1);
-		}
-	    }
-	    this.menu.push(new_dish);
-	    this.notifyObservers();
+		this.getDish(id).then(data => {
+			var new_dish = data;
+		    this.menu.push(new_dish);
+		    this.notifyObservers();
+		    }).catch( error => {
+     		//do something with the error
+			}); 
 
 	}
 

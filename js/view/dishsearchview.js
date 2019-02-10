@@ -5,9 +5,13 @@ var DishSearchView = function (container, model, app) {
 	this.update = function(){
 
 	var dishsearch = container.find("#dishsearch");
+	var loader = container.find("#loader");
 
 	var value = document.getElementById("myoption").value;
 	var keyword = document.getElementById("keyword").value;
+
+	loader.show();
+	
 
 	if (keyword == "") {
 		if (value == "All") {
@@ -36,12 +40,13 @@ var DishSearchView = function (container, model, app) {
 			});
 	}
 	
+
 	dishsearch.html("");
 
 	for(let dsh of this.type){
 			
 			var img = "https://spoonacular.com/recipeImages/" + dsh.image;
-			item = "<div id='" + dsh.id + "' class='col-xs-12 col-md-2'><img src='" + img + "'style='outline: 1px solid black;'/>" + "<h4>" + dsh.title + "</h4></div>"; 
+			item = "<div id='" + dsh.id + "' class='col-xs-12 col-md-2'><img src='" + img + "' height='200' width='200' style='outline: 1px solid black;'/>" + "<h4>" + dsh.title + "</h4></div>"; 
 				      
 			dishsearch.append(item);
 
@@ -52,6 +57,7 @@ var DishSearchView = function (container, model, app) {
 		}
 
 
+	loader.hide();
 	this.searchbutton = container.find("#searchbutton");
 
 }

@@ -24,16 +24,10 @@ var SidebarView = function (container, model) {
 
 		for(let dsh of menu){
 
-			var list = dsh.ingredients;
-			var price = 0;
-
-			for (let ing of list) {
-				price+= ing.price* number;
-			};
 
 			fullbar += "<div class='row' style='border: 1px solid black;'>"
-			+ "<div class='col-xs-6 col-md-6'>" + dsh.name + "</div>"
-			+ "<div class='col-xs-4 col-md-6'>" + price + "</div>"
+			+ "<div class='col-xs-6 col-md-6'>" + dsh.title + "</div>"
+			+ "<div class='col-xs-4 col-md-6'>" + Math.round(dsh.pricePerServing*number) + "</div>"
 			+ "</div>";
 
 		};

@@ -11,16 +11,14 @@ var ItemView = function (container, model) {
 
 	for (let dsh of menu) { 
 		
-		var img = "images/" + dsh.image;
+		var source= "<img src='" + dsh.image + "'style='outline: 1px solid black;'/>" ; 
 
-		var source= "<img src='" + img + "'style='outline: 1px solid black;'/>" ; 
-
-		var text="<h3>" + dsh.name + "</h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+		var text="<h3>" + dsh.title + "</h3>";
 		
 		full += "<div class='row'><div class='col-xs-6 col-md-2' style='padding: 5px;'>" + source + "</div>"
 		+ "<div class='col-xs-12 col-md-5'>" + text + "</div>"
 		+ "<div class='col-xs-12 col-md-5'><h4>Preparation</h4>"
-		+ "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+		+ dsh.instructions
 		+ "</div><br/></div>";
 		
 	};

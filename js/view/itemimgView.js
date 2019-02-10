@@ -16,16 +16,8 @@ var ItemImgView = function (container, model) {
 	var totalprice = model.getTotalMenuPrice();
 
 	for (let dsh of menu) { 
-  
-		var list = dsh.ingredients;
-		var price = 0;
-
-		for (let ing of list) {
-			price+= ing.price* number;
-		};
-
-		var img = "images/" + dsh.image;
-		source += "<div class='col-xs-12 col-md-3'><img src='" + img + "'style='outline: 1px solid black;'/>" + "<h4>" + dsh.name + "</h4>" + price + " SEK</div>"; 
+  		
+		source += "<div class='col-xs-12 col-md-3'><img src='" + dsh.image + "'style='outline: 1px solid black;'/>" + "<h4>" + dsh.title + "</h4>" + Math.round(dsh.pricePerServing*number) + " SEK</div>"; 
 		
 	};
 
