@@ -15,9 +15,8 @@ var ItemView = function (container, model) {
 
 		var text="<h3>" + dsh.title + "</h3>";
 		
-		full += "<div class='row'><div class='col-xs-6 col-md-2' style='padding: 5px;'>" + source + "</div>"
-		+ "<div class='col-xs-12 col-md-5'>" + text + "</div>"
-		+ "<div class='col-xs-12 col-md-5'><h4>Preparation</h4>"
+		full += "<div class='row'><div class='col-xs-12 col-md-6' style='padding: 5px;'>" + source + text + "</div>"
+		+ "<div class='col-xs-12 col-md-6'><h4>Preparation</h4>"
 		+ dsh.instructions
 		+ "</div><br/></div>";
 		
