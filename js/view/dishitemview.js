@@ -11,7 +11,7 @@ var ItemView = function (container, model) {
 
 	for (let dsh of menu) { 
 		
-		var source= "<img src='" + dsh.image + "'style='outline: 1px solid black;'/>" ; 
+		var source= "<img src='" + dsh.image + "' height='200' width='200' style='outline: 1px solid black;'/>" ; 
 
 		var text="<h3>" + dsh.title + "</h3>";
 		

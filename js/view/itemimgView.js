@@ -17,7 +17,7 @@ var ItemImgView = function (container, model) {
 
 	for (let dsh of menu) { 
   		
-		source += "<div class='col-xs-12 col-md-3'><img src='" + dsh.image + "'style='outline: 1px solid black;'/>" + "<h4>" + dsh.title + "</h4>" + Math.round(dsh.pricePerServing*number) + " SEK</div>"; 
+		source += "<div class='col-xs-12 col-md-3'><img src='" + dsh.image + "' height='200' width='200' style='outline: 1px solid black;'/>" + "<h4>" + dsh.title + "</h4>" + Math.round(dsh.pricePerServing*number) + " SEK</div>"; 
 		
 	};
 
