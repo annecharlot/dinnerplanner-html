@@ -18,14 +18,14 @@ var DetailView = function (container, model) {
 	var addmenubutton = container.find("#addbutton");
 	var preparation = container.find("#preparation");
 	var loader = container.find("#loader");
-	var error = container.find("#error");
+	var errormessage = container.find("#error");
 
 	this.backtosearch = container.find("#backtosearch");
 	
 	//var dsh = model.getDish(this.id);
 
 	loader.show();
-	error.hide();
+	errormessage.hide();
 
 	model.getDish(this.id).then(data => {
 		// do something with new dishes
@@ -69,7 +69,10 @@ var DetailView = function (container, model) {
      	
 	}).catch( error => {
      	//item.html("loading...")// do something with the error
-     	error.show();
+     	item.html("");
+     	ingredientlist.html("");
+     	preparation.html("");
+     	errormessage.show();
 	}); 
 
 	loader.hide();

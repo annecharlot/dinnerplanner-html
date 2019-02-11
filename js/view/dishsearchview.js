@@ -6,13 +6,14 @@ var DishSearchView = function (container, model, app) {
 
 	var dishsearch = container.find("#dishsearch");
 	var loader = container.find("#loader");
-	var error = container.find("#error");
+	var errormessage = container.find("#error");
 
 	var value = document.getElementById("myoption").value;
 	var keyword = document.getElementById("keyword").value;
 
+	dishsearch.html("");
 	loader.show();
-	error.hide();
+	errormessage.hide();
 
 	if (keyword == "") {
 		if (value == "All") {
@@ -23,7 +24,8 @@ var DishSearchView = function (container, model, app) {
 			model.getAllDishes(value).then(data => {
      		this.type = data.results
 			}).catch( error => {
-     			error.show();
+     			dishsearch.html("");
+     			errormessage.show();
 			}); 
 		}
 
@@ -34,7 +36,8 @@ var DishSearchView = function (container, model, app) {
 		model.getAllDishes(value, keyword).then(data => {
 			this.type = data.results;
 			}).catch( error => {
-     			error.show();
+     			dishsearch.html("");
+     			errormessage.show();
 			});
 	}
 	
