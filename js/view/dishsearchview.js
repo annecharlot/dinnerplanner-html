@@ -15,12 +15,38 @@ var DishSearchView = function (container, model, app) {
 	loader.show();
 	errormessage.hide();
 
+//** ändra filter=="" i model och ha hela for loopen i getalldishes.then...
 
-	model.getAllDishes(value, keyword).then(data => {
-		this.type = data.results;
-		dishsearch.html("");
+	if (keyword == "") {
+		if (value == "All") {
+		this.type = model.getAllDishesTotal();
+		}
 
-		for(let dsh of this.type){
+		else {
+			model.getAllDishes(value).then(data => {
+     		this.type = data.results
+			}).catch( error => {
+     			dishsearch.html("");
+     			errormessage.show();
+			}); 
+		}
+
+	}
+
+	else {
+		
+		model.getAllDishes(value, keyword).then(data => {
+			this.type = data.results;
+			}).catch( error => {
+     			dishsearch.html("");
+     			errormessage.show();
+			});
+	}
+	
+
+	dishsearch.html("");
+
+	for(let dsh of this.type){
 			
 			var img = "https://spoonacular.com/recipeImages/" + dsh.image;
 			item = "<div id='" + dsh.id + "' class='col-xs-12 col-md-2'><img src='" + img + "' height='200' width='200' style='outline: 1px solid black;'/>" + "<h4>" + dsh.title + "</h4></div>"; 
@@ -32,13 +58,6 @@ var DishSearchView = function (container, model, app) {
 			new ItemButtonController(itembutton, dsh.id, app);
 
 		}
-
-
-		}).catch( error => {
-     		dishsearch.html("");
-     		errormessage.show();
-		});
-	
 
 
 	loader.hide();
