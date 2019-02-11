@@ -20,12 +20,9 @@ var DishSearchView = function (container, model, app) {
 		}
 
 		else {
-			//this.type = model.getAllDishes(value);
 			model.getAllDishes(value).then(data => {
-     		// do something with new dishes
      		this.type = data.results
 			}).catch( error => {
-     			// do something with the error 
      			error.show();
 			}); 
 		}
@@ -33,12 +30,10 @@ var DishSearchView = function (container, model, app) {
 	}
 
 	else {
-		//this.type = model.getAllDishes(value, keyword);
+		
 		model.getAllDishes(value, keyword).then(data => {
-			this.type = data;
-     		// do something with new dishes
+			this.type = data.results;
 			}).catch( error => {
-     			// do something with the error 
      			error.show();
 			});
 	}

@@ -68,10 +68,6 @@ class DinnerModel {
 
 	}
 
-	getAllDishesTotal() {
-		return this.dishes;
-	}
-
 	getSelectedDishTotal(type){
 		const typearray = []
 		for(let dsh of this.dishes){
@@ -134,17 +130,30 @@ class DinnerModel {
 		this.notifyObservers();
 	}
 
+	getAllDishesTotal() {
+		return this.dishes;
+	}
     
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
 	//you can use the filter argument to filter out the dish by name or ingredient (use for search)
 	//if you don't pass any filter all the dishes will be returned
 	getAllDishes(type,filter) {
-	    return fetch(`https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?type=${type}`,{ 
+	    if (filter == null) {
+	    	return fetch(`https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?type=${type}`,{ 
+            headers:{   
+                'X-Mashape-Key': API_KEY
+            }
+		      }).then(response => response.json())
+		        .then(data => data)
+			    }
+		else {
+			return fetch(`https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?type=${type}&query=${filter}`,{ 
             headers:{   
                 'X-Mashape-Key': API_KEY
             }
       }).then(response => response.json())
         .then(data => data)
+		}
 } 
 
 
