@@ -17,6 +17,7 @@ var DetailView = function (container, model) {
 
 			var number = model.getNumberOfGuests();
 
+			//Du får inte göra detta :(( ropa inte på getDish()
 			model.getDish(this.id).then(data => {
 		
 			var dsh = data;
