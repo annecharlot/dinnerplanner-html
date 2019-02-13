@@ -23,20 +23,20 @@ class DinnerModel {
     }
 
     notifyObservers(changeDetails) {
-           for(var i=0; i<this._observers.length; i++) {
+           if (changeDetails === null) {
+           	for(var i=0; i<this._observers.length; i++) {
                  this._observers[i].update(this, changeDetails);
-           }	
+           		}
+           }
+
+           else {
+           	for(var i=0; i<this._observers.length; i++) {
+                 this._observers[i].update(changeDetails);
+           		}
+           }
+           	
      }
 
-     /** setactivedish(id) {
-     	this.activedish.push(getDish(id));
-     } 
-
-     getactivedish() {
-     	for (let dsh of this.activedish) {
-     		return dsh;
-     	}
-     } */
 
 	setNumberOfGuests(num) {
 		//TODO Lab 1
@@ -47,7 +47,7 @@ class DinnerModel {
 		else{
 			this.number = num;
 		}
-		this.notifyObservers();
+		this.notifyObservers("NumberOfGuests");
 		
 	}
 	

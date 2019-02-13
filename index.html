@@ -46,7 +46,6 @@
             </div>
           <div class='col-xs-12 col-md-2'>
             <select id="myoption">
-               <option>All</option>
               <option>appetizer</option>
               <option>main course</option>
               <option>dessert</option>
@@ -64,9 +63,9 @@
           <button id='searchbutton' class='btn' style='background-color: rgba(244, 179, 80, 1); border: black; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);'>search</button>
         </div>
       </div>
+      <div class="row" id="loader">Loading...</div>
       <hr class='divider' style='border: 1px solid black;'/>
           <div class="row">
-            <h1 id="loader">Loading</h1>
             <span id="dishsearch"></span>
             <h3 id="error">Something went wrong...You could have Network Connectivity Problems</h3>
           </div>
@@ -107,7 +106,7 @@
     
   <div class="row">
     <div class="col-xs-12 col-md-5">
-      <span id="loader">Loading</span>
+      <div id="loader">Loading...</div>
       <span id="item"></span>
       <h3 id="error">Something went wrong...You could have Network Connectivity Problems</h3>
       <button id='backtosearch' class='btn' style='background-color: rgba(244, 179, 80, 1); border: black; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);'>back to search</button>

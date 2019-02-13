@@ -1,7 +1,11 @@
 
 var SidebarView = function (container, model) {
 	
-	this.update = function() {
+	this.update = function(args) {
+
+	if (args === "NumberOfGuests") {
+		console.log("Hehehehe");
+	}
 
 	var sidebar = container.find("#sidebar");
 	var guestnumber = container.find("#guestnumber");
