@@ -139,7 +139,7 @@ class DinnerModel {
 	//if you don't pass any filter all the dishes will be returned
 	getAllDishes(type,filter) {
 	    if (filter == null) {
-	    	return fetch(`https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?type=${type}`,{ 
+	    	return fetch(`http://sunset.nada.kth.se:8080/iprog/group/44/recipes/search?type=${type}`,{ 
             headers:{   
                 'X-Mashape-Key': API_KEY
             }
@@ -147,7 +147,7 @@ class DinnerModel {
 		        .then(data => data)
 			    }
 		else {
-			return fetch(`https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?type=${type}&query=${filter}`,{ 
+			return fetch(`http://sunset.nada.kth.se:8080/iprog/group/44/recipes/search?type=${type}&query=${filter}`,{ 
             headers:{   
                 'X-Mashape-Key': API_KEY
             }
@@ -159,7 +159,7 @@ class DinnerModel {
 
 	//function that returns a dish of specific ID
 	getDish (id) {
-	      return fetch(`https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/${id}/information?includeNutrition=false`,{ 
+	      return fetch(`http://sunset.nada.kth.se:8080/iprog/group/44/recipes/${id}/information?includeNutrition=false`,{ 
             headers:{   
                 'X-Mashape-Key': API_KEY
             }
