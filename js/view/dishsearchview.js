@@ -47,7 +47,6 @@ var DishSearchView = function (container, model, app) {
 		
 				model.getAllDishes(value).then(data => {
 	     		this.type = data.results
-	     		console.log(this.type);
 	     		this.execute(this.type);
 
 	     		loader.hide();
