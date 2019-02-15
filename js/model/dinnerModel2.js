@@ -104,10 +104,7 @@ class DinnerModel {
 
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
 	//it is removed from the menu and the new one added.
-	addDishToMenu(id) {
-		//TODO Lab 1 
-		this.getDish(id).then(data => {
-			var new_dish = data;
+	addDishToMenu(new_dish) {
 			for (let dsh of this.menu) {
 				if (dsh.id == new_dish.id){
 					this.menu.splice(this.menu.indexOf(dsh), 1);
@@ -115,10 +112,6 @@ class DinnerModel {
 			}
 		    this.menu.push(new_dish);
 		    this.notifyObservers();
-
-		    }).catch( error => {
-     		//do something with the error
-			}); 
 
 	}
 

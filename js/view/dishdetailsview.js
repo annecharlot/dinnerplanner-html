@@ -73,8 +73,6 @@ var DetailView = function (container, model) {
 
 		   	preparation.html(Preparation);
 
-		   	this.dsh_id = this.dsh.id;
-
 		   	loader.hide();
 
 	     	
